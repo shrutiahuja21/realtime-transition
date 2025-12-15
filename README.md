@@ -14,3 +14,6 @@ POST /upload
 POST /process  
 GET /process/{job_id}/status  
 GET /media/{job_id}.mp4
+
+# TO RUN
+http://localhost:8000/docs
