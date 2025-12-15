@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lipsync-pipeline
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lipsync
+  template:
+    metadata:
+      labels:
+        app: lipsync
+    spec:
+      containers:
+      - name: api
+        image: lipsync:latest
+        ports:
+        - containerPort: 8000
